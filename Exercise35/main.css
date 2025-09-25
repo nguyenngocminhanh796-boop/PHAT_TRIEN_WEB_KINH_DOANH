@@ -1,0 +1,36 @@
+body 
+{ background-image: url('images/camel.gif');
+ background-position: right bottom;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ }
+ p 
+ { font-size: 16pt;
+ color: #aa5588;
+ text-align: justify;
+ font-family: arial, sans-serif;
+ }
+ ol 
+ {list-style-type: upper-roman;
+    font-size: 16pt; 
+    font-weight: bold;
+ }
+ ol ol{list-style-type: decimal;
+    font-size: 12pt;
+    font-weight: normal;
+ }
+ ol ol ul{
+ list-style-type: circle;
+ font-size: 11pt; 
+ }
+ .list{
+ font-family:verdana;
+ }
+a{
+text-decoration: none
+}
+a:hover {
+ text-decoration: underline;
+ color: red;
+ background-color: #ccffcc
+}
