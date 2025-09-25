@@ -1,44 +1,23 @@
 <html>
 <head>
     <title>Exercise 34 - Vũ Thị Thanh</title>
-    <style type="text/css">
-        body {
-            background-color: lightblue;
-            background-image: url("camel.gif");
-            background-position: right bottom;
-            background-repeat: repeat;
-            background-attachment: fixed;
-            font-family: Arial, sans-serif;
-        }
-
-        h1 {
-            color: black;
-        }
-
-        p {
-            font-size: 12pt;
-            text-align: justify;
-        }
-
-        .section-title {
-            font-weight: bold;
-            font-family: Verdana, sans-serif;
-        }
-
-        .copyright {
-            font-size: 10pt;
-        }
-    </style>
 </head>
-<body>
-    <h1>Inline Styles</h1>
+<body style="background-color: lightblue; 
+             background-image: url('camel.gif'); 
+             background-position: right bottom; 
+             background-repeat: repeat; 
+             background-attachment: fixed; 
+             font-family: Arial, sans-serif;">
+
+    <h1 style="color: black;">Inline Styles</h1>
     <p><strong>Style Properties:</strong> text, font, background, margin, padding</p>
     <hr />
 
     <h1 style="color: #AAAAAA">Vietnam Information</h1>
 
+
     <p style="font-family: Verdana; font-size: 14pt;">
-        <b>Geography</b><br/>
+        <b style="font-size: 16pt; color: black;">Geography</b><br/>
         Inland area: 330,991 km²<br/>
         Continental shelf area: 1,000,000 km²<br/>
         Population: 78,774,000 inhabitants (in 1999)<br/>
@@ -47,33 +26,35 @@
         Longitude 08030' - 23022' North<br/>
     </p>
 
+
     <p style="text-align: left; font-size: 14pt; background-color: #CCCCCC; padding-left: 1cm;">
-        <b style="color: #0000FF">Topography</b><br/>
+        <b style="font-size: 16pt; color: #0000FF;">Topography</b><br/>
         Three quarters of Vietnam's territory consists of mountainous regions.
         Vietnam has two major deltas (the Red River delta and the Mekong delta)
         and four distinctive mountainous zones each having its own unique features.
     </p>
 
     <p style="margin-left: 2cm; 
-          background-image: url('images/camel.gif'); 
-          background-repeat: repeat; 
-          background-position: fixed;">
-    <b style="color: #FF00FF">People</b><br/>
-    The Vietnamese population exceeds 78.7 million divided into 54 ethnic groups.
-    The largest group is the Viet, or Kinh, accounting for 80% of the whole population,
-    concentrating in the plain areas while minorities occupy the highlands and mountains.
-</p>
+              font-size: 14pt;
+              background-image: url('images/camel.gif'); 
+              background-repeat: repeat;">
+        <b style="font-size: 16pt; color: #FF00FF;">People</b><br/>
+        The Vietnamese population exceeds 78.7 million divided into 54 ethnic groups.
+        The largest group is the Viet, or Kinh, accounting for 80% of the whole population,
+        concentrating in the plain areas while minorities occupy the highlands and mountains.
+    </p>
 
-
-
-    <p style="margin-right: 1cm; margin-left: 1cm; text-align: justify; background-color: #CCCCCC;">
-        <b style="color: #00FFFF; text-decoration: underline;">Religion</b><br/>
+    <p style="margin-right: 1cm; margin-left: 1cm; 
+              text-align: justify; 
+              font-size: 14pt;
+              background-color: #CCCCCC;">
+        <b style="font-size: 16pt; color: #00FFFF; text-decoration: underline;">Religion</b><br/>
         There is no official religion in Vietnam, but Buddhism is relatively popular.
         Some of the Catholic churches and Buddhist pagodas are interesting tourist attractions.
         There are religions more specific to the southern regions of the country such as the
         Caodai sect, the Hoa Hao sect, and Islam. Most Vietnamese worship their ancestors.
     </p>
 
-    <p class="copyright">Copyright © BenThanh Tourist</p>
+    <p style="font-size: 10pt;">Copyright © BenThanh Tourist</p>
 </body>
 </html>
