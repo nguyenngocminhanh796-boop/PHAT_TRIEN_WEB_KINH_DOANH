@@ -1,0 +1,203 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Jackson Electronics - Vũ Thị Thanh</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: #99ccff;
+      margin: 0;
+      padding: 0;
+    }
+
+    #header {
+      text-align: center;
+      margin: 20px auto 10px auto;
+    }
+
+    #header img {
+      max-width: 350px;
+      height: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    p.intro {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    form {
+      width: 650px;
+      margin: auto;
+      background-color: #99ccff;
+      padding: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 6px;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    input[type="text"], select, textarea {
+      width: 95%;
+      padding: 4px;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    textarea {
+      height: 70px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .buttons input {
+      padding: 6px 15px;
+      margin: 5px;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .option-group, .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px; 
+    }
+
+    .option-group label, 
+    .checkbox-group label {
+      min-width: 180px; 
+    }
+
+    hr {
+      margin: 15px 0;
+      border: 0;
+      border-top: 1px solid #000;
+    }
+  </style>
+
+  <script>
+    function registerAlert() {
+      alert("Registration Successful!");
+    }
+  </script>
+</head>
+<body>
+
+  <div id="header">
+    <img src="images/Jackson.gif" alt="Jackson Electronics Logo">
+  </div>
+
+  <h2>Registration Form</h2>
+  <p class="intro">Register your Jackson Electronics product here</p>
+
+  <form>
+    <table>
+      <tr>
+        <td>First Name:</td>
+        <td><input type="text" name="fname"></td>
+        <td>Last Name:</td>
+        <td><input type="text" name="lname"></td>
+      </tr>
+      <tr>
+        <td>Address #1:</td>
+        <td colspan="3"><input type="text" name="addr1"></td>
+      </tr>
+      <tr>
+        <td>Address #2:</td>
+        <td colspan="3"><input type="text" name="addr2"></td>
+      </tr>
+      <tr>
+        <td>City:</td>
+        <td><input type="text" name="city"></td>
+        <td>State:</td>
+        <td>
+          <input type="text" name="state" style="width:70px;">
+          Zip: <input type="text" name="zip" style="width:70px;">
+        </td>
+      </tr>
+      <tr>
+        <td>Country:</td>
+        <td colspan="3">
+          <select name="country">
+            <option>United States</option>
+            <option>Canada</option>
+            <option>Mexico</option>
+            <option>Other</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <table>
+      <tr>
+        <td>Product:</td>
+        <td>
+          <select>
+            <option>ScanMaster</option>
+            <option>Printer</option>
+            <option>Monitor</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Date Purchased:</td>
+        <td><input type="text" name="date"></td>
+      </tr>
+      <tr>
+        <td>Serial #:</td>
+        <td><input type="text" name="serial"></td>
+      </tr>
+      <tr>
+        <td>Used for:</td>
+        <td>
+          <div class="option-group">
+            <label><input type="radio" name="used" value="Home"> Home</label>
+            <label><input type="radio" name="used" value="Business"> Business</label>
+            <label><input type="radio" name="used" value="Government"> Government</label>
+            <label><input type="radio" name="used" value="Educational"> Educational Institution</label>
+            <label><input type="radio" name="used" value="Other"> Other</label>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>System (check all that apply):</td>
+        <td>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="sys" value="Windows"> Windows</label>
+            <label><input type="checkbox" name="sys" value="Macintosh"> Macintosh</label>
+            <label><input type="checkbox" name="sys" value="UNIX"> UNIX</label>
+            <label><input type="checkbox" name="sys" value="Other"> Other</label>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Comments?:</td>
+        <td><textarea></textarea></td>
+      </tr>
+    </table>
+
+    <div class="buttons">
+      <input type="button" value="Click to register" onclick="registerAlert()">
+      <input type="reset" value="Click to cancel">
+    </div>
+  </form>
+
+</body>
+</html>
