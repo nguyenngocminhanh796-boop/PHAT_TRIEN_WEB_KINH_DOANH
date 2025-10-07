@@ -1,0 +1,188 @@
+<html>
+<head>
+  <title>Travel Expense Report - DeLong Enterprises - Vũ Thị Thanh</title>
+  <style>
+    body {
+      background-color: #ccffff; 
+      font-family: "Times New Roman", Times, serif;
+      margin: 30px;
+    }
+
+  
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 600px;
+      height: 100px;
+    }
+
+    h2 {
+      color: #000066;
+      border-bottom: 2px solid gray;
+      padding-bottom: 20px;
+      margin-bottom: 35px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    input[type="text"], select, textarea {
+      font-family: "Times New Roman", Times, serif;
+      padding: 4px;
+      font-size: 14px;
+      border: 1px solid #999;
+      border-radius: 2px;
+    }
+
+    textarea {
+      width: 75%;
+      height: 80px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 5px;
+    }
+
+    th, td {
+      border: 1px solid #666;
+      padding: 5px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ccffff;
+    }
+
+    .buttons {
+      margin-top: 10px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 14px;
+      padding: 4px 10px;
+      margin-right: 10px;
+      border: 1px solid #444;
+      border-radius: 3px;
+      background-color: #f2f2f2;
+    }
+
+    .footer {
+      font-size: 14px;
+      padding-top: 20px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="DeLong.jpg" alt="DeLong Enterprises Logo">
+    </div>
+
+    <h2>Travel Expense Report</h2>
+
+    <form>
+      <p>1) First Name: <input type="text" size="15"> 
+         Last Name: <input type="text" size="15"></p>
+
+      <p>2) Social Security Number: <input type="text" size="15"></p>
+
+      <p>3) Department: 
+        <select>
+          <option>Accounting</option>
+          <option>Marketing</option>
+          <option>Sales</option>
+          <option>Human Resources</option>
+          <option>Administration</option>
+        </select>
+      </p>
+
+      <p>4) Describe the purpose of your trip.</p>
+      <textarea></textarea>
+
+      <p>5) Itemize your travel expenses</p>
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Amount</th>
+        </tr>
+        <tr>
+          <td><input type="text" size="10" placeholder="mm/dd/yy"></td>
+          <td><input type="text" size="25"></td>
+          <td>
+            <select>
+              <option>Meal</option>
+              <option>Lodging</option>
+              <option>Transport</option>
+              <option>Misc.</option>
+            </select>
+          </td>
+          <td><input type="text" size="8"></td>
+        </tr>
+        <tr>
+          <td><input type="text" size="10" placeholder="mm/dd/yy"></td>
+          <td><input type="text" size="25"></td>
+          <td>
+            <select>
+              <option>Meal</option>
+              <option>Lodging</option>
+              <option>Transport</option>
+              <option>Misc.</option>
+            </select>
+          </td>
+          <td><input type="text" size="8"></td>
+        </tr>
+        <tr>
+          <td><input type="text" size="10" placeholder="mm/dd/yy"></td>
+          <td><input type="text" size="25"></td>
+          <td>
+            <select>
+              <option>Meal</option>
+              <option>Lodging</option>
+              <option>Transport</option>
+              <option>Misc.</option>
+            </select>
+          </td>
+          <td><input type="text" size="8"></td>
+        </tr>
+        <tr>
+          <td><input type="text" size="10" placeholder="mm/dd/yy"></td>
+          <td><input type="text" size="25"></td>
+          <td>
+            <select>
+              <option>Meal</option>
+              <option>Lodging</option>
+              <option>Transport</option>
+              <option>Misc.</option>
+            </select>
+          </td>
+          <td><input type="text" size="8"></td>
+        </tr>
+      </table>
+
+      <p>6) Have you submitted your receipts? 
+        <input type="radio" name="receipts"> Yes 
+        <input type="radio" name="receipts"> No
+      </p>
+
+      <div class="buttons">
+        <input type="submit" value="Submit travel expenses">
+        <input type="reset" value="Reset">
+      </div>
+
+      <div class="footer">
+        Questions? Contact Debbie Larson in Accounting (ext. 2150).
+      </div>
+    </form>
+  </div>
+</body>
+</html>

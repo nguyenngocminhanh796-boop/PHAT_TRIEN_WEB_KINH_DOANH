@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <titile>Change color Combo Box - Vũ Thị Thanh</titile>
+        <script>
+            function change_color(value)
+            {
+                mydiv.documnet.getElementById("mydiv")
+                mydiv.setAttribute("style", "width: 100%; height:50px; background-color: "+value)
+
+            }
+            function change_image(value)
+            {
+                author_img.documnet.getElementById("author_img")
+                mydiv.setAttribute("src", "images/"+value)
+
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <select name="color" id="color" onchange="change_color(this.value)">
+                <option value="blue" >Xanh lè</option>
+                <option value="red" >Đỏ choé</option>
+                <option value="yellow" >Vàng khè</option>
+            </select>
+            <div style="width: 100%; height:50px; background-color: pink;" id="mydiv">
+
+            </div>
+            <select name="author" id="author" >
+                <option value="images/LVB1.jpg" >Ông A </option>
+               <option value="images/LVB2.jpg" >Ông B </option>
+                <option value="images/LVB3.jpg" >Ông C </option>
+            </select>
+            <div>
+                <img id="author_img" src="images/LVB1.jpg"/>
+            </div>
+        
+        </form>
+
+    </body>
+</html>

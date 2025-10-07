@@ -1,0 +1,157 @@
+<html>
+<head>
+<title>Newborn Registration - St. Mary's of Northland Pines'- Vũ Thị Thanh</title>
+<style>
+  body {
+    background-color: #008080; 
+    font-family: "Times New Roman", Times, serif;
+    margin: 40px;
+    color: white;
+  }
+
+  form {
+    width: 700px;
+    margin: auto;
+    background-color: #008080;
+    border: 2px;
+    padding: 25px 40px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .header h1 {
+    color: orange;
+    font-size: 26px;
+    margin-bottom: 2px;
+  }
+
+  .header h2 {
+    color: #ff9933;
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid red;
+    width: 100%;
+    margin: 0 auto 10px auto;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  input[type="text"], select {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+  }
+
+  .short { width: 100px; }
+  .medium { width: 180px; }
+  .long { width: 250px; }
+
+  select[multiple] {
+    width: 150px;
+    height: 60px;
+    vertical-align: left;
+  }
+
+  .buttons {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  input[type="submit"], input[type="reset"] {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    padding: 3px 10px;
+    margin: 5px;
+    border: 1px solid #333;
+    border-radius: 2px;
+    background-color: #e0e0e0;
+  }
+  .physician {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .physician label {
+    width: 150px;
+  }
+</style>
+</head>
+
+<body>
+
+  <form>
+    <div class="header">
+      <img src="Logo.gif" alt="St. Mary's of Northland Pines">
+    </div>
+
+    <h3>Newborn Registration</h3>
+
+    <p>Date: <input type="text" class="short" placeholder="mm/dd/yy"></p>
+
+    <p>1) Infant's first name: 
+      <input type="text" class="medium"> 
+      Last: 
+      <input type="text" class="medium">
+    </p>
+
+    <p>2) Medical Record #: 
+      <input type="text" class="medium">
+    </p>
+
+    <p>3) Date of birth: 
+      <input type="text" class="short" placeholder="mm/dd/yy">
+    </p>
+
+    <p>4) Birth weight: 
+      <input type="text" class="short">
+    </p>
+
+    <p>5) APGAR score: 
+      <input type="text" class="short">
+    </p>
+
+    <p>6) Mother's first name: 
+      <input type="text" class="medium"> 
+      Last: 
+      <input type="text" class="medium">
+    </p>
+
+    <p>7) Father's first name: 
+      <input type="text" class="medium"> 
+      Last: 
+      <input type="text" class="medium">
+    </p>
+
+    <div class="physician">
+      <label>8) Physician (check all that apply):</label>
+      <select multiple>
+        <option>Dr. Warren Albert</option>
+        <option>Dr. Maria Alvarez</option>
+        <option>Dr. Karen Brinkman</option>
+        <option>Dr. Micheal Kerry</option>
+      </select>
+    </div>
+
+    <div class="buttons">
+      <input type="submit" value="Register">
+      <input type="reset" value="Cancel">
+    </div>
+  </form>
+
+</body>
+</html>

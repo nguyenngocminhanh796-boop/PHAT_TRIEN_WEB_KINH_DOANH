@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Server Get- Vũ Thị Thanh</title>
+        <meta charset="utf-8"/>
+        <script>
+            function getUrlVars(){
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+[ˆˆ=&]+)=([ˆ&]*)/gi,
+                    function (m,key,value){
+                    vars[key] = value;
+                    });
+                    return vars;
+            }
+            var ten = unescape(ghetUrlVars()["txtten"]);
+            var email = unescape(ghetUrlVars()["txtemail"]);
+    </script>
+</head>
+</html>

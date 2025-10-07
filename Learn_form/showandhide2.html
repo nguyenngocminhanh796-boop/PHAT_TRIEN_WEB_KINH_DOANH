@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <titile>Show and Hide Images - Vũ Thị Thanh</titile>
+        <script>
+            function show_hide_image(value)
+            {
+                //step 1: get image element
+                img_khang=document.getElementById("khang123")
+                //step 2: hide (using style display -> none)
+                img_khang.style="display:"+value
+            }
+            
+        </script>
+    </head>
+    <body>
+        <form name="my form">
+            <input type="radio" name="myimage" id="img1" onchange="show_hide_image('block')"/>
+            <label for="img1">Show Image</label>
+            <br/>
+            <input type="radio" name="myimage" id="img2" onchange="show_hide_image('none')"/>
+            <label for="img2">Hide Image</label>
+            <br/>
+            <img src="images/_.jpeg" id="khang123" name="khang123"
+                style="display:block;"
+                />
+
+
+        </form>
+    </body>
+</html>
