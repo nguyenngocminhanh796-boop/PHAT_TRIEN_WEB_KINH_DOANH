@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Result Page - Product Summary</title>
+</head>
+<body>
+  <h2>Product Summary Result</h2>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    const qty1 = params.get("qty1");
+    const qty2 = params.get("qty2");
+    const qty3 = params.get("qty3");
+    const item1 = params.get("item1");
+    const item2 = params.get("item2");
+    const item3 = params.get("item3");
+    const total = params.get("total");
+
+    document.write("<table border='1' cellspacing='0' cellpadding='5'>");
+    document.write("<tr><th>Part Number</th><th>Description</th><th>Price</th><th>Qty</th><th>Item Total</th></tr>");
+    document.write("<tr><td>C112</td><td>Mouse</td><td>19.95$</td><td>" + qty1 + "</td><td>" + item1 + "</td></tr>");
+    document.write("<tr><td>B124</td><td>Keyboard US</td><td>29.95$</td><td>" + qty2 + "</td><td>" + item2 + "</td></tr>");
+    document.write("<tr><td>U125</td><td>USB KingMax</td><td>39.95$</td><td>" + qty3 + "</td><td>" + item3 + "</td></tr>");
+    document.write("<tr><td colspan='4' align='right'><b>Total:</b></td><td>" + total + "</td></tr>");
+    document.write("</table>");
+  </script>
+  <br>
+  <a href="home.html">← Back to Product Page</a>
+</body>
+</html>

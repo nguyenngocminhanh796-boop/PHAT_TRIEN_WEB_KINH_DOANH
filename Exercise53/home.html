@@ -1,0 +1,86 @@
+<html>
+<head>
+  <title>Exercise 53 - Product List - Vũ Thị Thanh</title>
+  <script>
+    function calcItemTotal() {
+      const price1 = 19.95;
+      const price2 = 29.95;
+      const price3 = 39.95;
+
+      const qty1 = parseFloat(document.getElementById("qty1").value) || 0;
+      const qty2 = parseFloat(document.getElementById("qty2").value) || 0;
+      const qty3 = parseFloat(document.getElementById("qty3").value) || 0;
+
+      const item1 = qty1 * price1;
+      const item2 = qty2 * price2;
+      const item3 = qty3 * price3;
+
+      document.getElementById("item1").value = item1 ? item1.toFixed(2) + "$" : "";
+      document.getElementById("item2").value = item2 ? item2.toFixed(2) + "$" : "";
+      document.getElementById("item3").value = item3 ? item3.toFixed(2) + "$" : "";
+
+      const total = item1 + item2 + item3;
+      document.getElementById("total").value = total ? total.toFixed(2) + "$" : "";
+    }
+
+    function setupAutoCalc() {
+      document.getElementById("qty1").addEventListener("input", calcItemTotal);
+      document.getElementById("qty2").addEventListener("input", calcItemTotal);
+      document.getElementById("qty3").addEventListener("input", calcItemTotal);
+    }
+
+    onload = setupAutoCalc;
+  </script>
+</head>
+
+<body>
+  <h2>List of Products</h2>
+
+  <form action="result.html" method="get">
+    <table border="1" cellspacing="0" cellpadding="5">
+      <tr>
+        <th>Part Number</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Item total</th>
+      </tr>
+
+      <tr>
+        <td>C112</td>
+        <td>Mouse</td>
+        <td>19.95$</td>
+        <td><input type="text" id="qty1" name="qty1" size="5"></td>
+        <td><input type="text" id="item1" name="item1" size="10" readonly></td>
+      </tr>
+
+      <tr>
+        <td>B124</td>
+        <td>Keyboard US</td>
+        <td>29.95$</td>
+        <td><input type="text" id="qty2" name="qty2" size="5"></td>
+        <td><input type="text" id="item2" name="item2" size="10" readonly></td>
+      </tr>
+
+      <tr>
+        <td>U125</td>
+        <td>USB KingMax</td>
+        <td>39.95$</td>
+        <td><input type="text" id="qty3" name="qty3" size="5"></td>
+        <td><input type="text" id="item3" name="item3" size="10" readonly></td>
+      </tr>
+
+      <tr>
+        <td colspan="4" align="right"><b>Total:</b></td>
+        <td><input type="text" id="total" name="total" size="10" readonly></td>
+      </tr>
+
+      <tr>
+        <td colspan="5" align="right">
+          <input type="submit" value="Sum">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
