@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <title>Exercise 56 - Vũ Thị Thanh </title>
+    <script type="text/javascript">
+      function enterData() {
+        let input = document.getElementById("inputData").value;
+        document.getElementById("result").value = input;
+      }
+
+      function upperCaseDisplay() {
+        let input = document.getElementById("inputData").value;
+        document.getElementById("result").value = input.toUpperCase();
+      }
+
+      function lowerCaseDisplay() {
+        let input = document.getElementById("inputData").value;
+        document.getElementById("result").value = input.toLowerCase();
+      }
+
+      function countUppercase() {
+        let input = document.getElementById("inputData").value;
+        let count = (input.match(/[A-Z]/g) || []).length;
+        document.getElementById("result").value =
+          "Number of uppercase characters: " + count;
+      }
+
+      function countLowercase() {
+        let input = document.getElementById("inputData").value;
+        let count = (input.match(/[a-z]/g) || []).length;
+        document.getElementById("result").value =
+          "Number of lowercase characters: " + count;
+      }
+
+      function outputOneWordPerLine() {
+        let input = document.getElementById("inputData").value.trim();
+        let words = input.split(/\s+/);
+        document.getElementById("result").value = words.join("\n");
+      }
+
+      function wordCount() {
+        let input = document.getElementById("inputData").value.trim();
+        let words = input.length === 0 ? [] : input.split(/\s+/);
+        document.getElementById("result").value =
+          "Word count: " + words.length;
+      }
+
+      function printVowelsConsonants() {
+        let input = document.getElementById("inputData").value.toLowerCase();
+        let vowels = (input.match(/[aeiou]/g) || []).length;
+        let consonants = (input.match(/[bcdfghjklmnpqrstvwxyz]/g) || []).length;
+        document.getElementById("result").value =
+          "Vowels: " + vowels + "\nConsonants: " + consonants;
+      }
+
+      function openW3C() {
+        open("https://www.w3schools.com/js/js_string_methods.asp", "_blank");
+      }
+    </script>
+  </head>
+
+  <body>
+    <form name="string_form">
+      <table border="1" align="center" cellpadding="5">
+        <tr>
+          <th>Input Data:</th>
+          <th>Result:</th>
+        </tr>
+        <tr>
+          <td><textarea id="inputData" rows="6" cols="30"></textarea></td>
+          <td><textarea id="result" rows="6" cols="30" readonly></textarea></td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="button" value="Enter Data" onclick="enterData()">
+          </td>
+          <td align="center">
+            <input
+              type="button"
+              value="Count the number of uppercase characters"
+              onclick="countUppercase()"
+            >
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="button" value="Uppercase display" onclick="upperCaseDisplay()">
+          </td>
+          <td align="center">
+            <input type="button" value="Output one word per line" onclick="outputOneWordPerLine()">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="button" value="Lowercase display" onclick="lowerCaseDisplay()">
+          </td>
+          <td align="center">
+            <input type="button" value="Word count" onclick="wordCount()">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="button" value="Count the number of lowercase characters" onclick="countLowercase()">
+          </td>
+          <td align="center">
+            <input type="button" value="Print vowels, consonants" onclick="printVowelsConsonants()">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="button" value="W3C's String Processing Website" onclick="openW3C()">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

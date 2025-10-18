@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Exercise 55 - Vũ Thị Thanh</title>
+    <script type="text/javascript">
+      function solveEquation() {
+        var a = parseFloat(document.getElementById("a").value);
+        var b = parseFloat(document.getElementById("b").value);
+        var c = parseFloat(document.getElementById("c").value);
+        var result = document.getElementById("result");
+
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+          result.value = "Please enter valid numbers!";
+          return;
+        }
+
+        if (a === 0) {
+          result.value = "Not a quadratic equation";
+          return;
+        }
+        var delta = b * b - 4 * a * c;
+        if (delta < 0) {
+          result.value = "No real roots";
+        } else if (delta === 0) {
+          var x = -b / (2 * a);
+          result.value = "x = " + x.toFixed(2);
+        } else {
+          var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+          var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+          result.value = "x1 = " + x1.toFixed(2) + " ; x2 = " + x2.toFixed(2);
+        }
+      }
+
+      function clearForm() {
+        document.getElementById("a").value = "";
+        document.getElementById("b").value = "";
+        document.getElementById("c").value = "";
+        document.getElementById("result").value = "";
+      }
+    </script>
+  </head>
+  <body style="font-family: Arial; margin-top: 30px;">
+    <form name="my_form">
+      <table border="1" cellpadding="5" style="border-collapse: collapse; margin: auto; width: 400px; text-align: center;">
+        <tr>
+          <th colspan="2" style="background-color: #e6f0d1; padding: 8px; font-size: 18px;">
+            The quadratic equation
+          </th>
+        </tr>
+        <tr>
+          <td style="padding: 6px;">a:</td>
+          <td><input type="text" id="a" value="1" style="width: 90%; padding: 4px;"></td>
+        </tr>
+        <tr>
+          <td style="padding: 6px;">b:</td>
+          <td><input type="text" id="b" value="3" style="width: 90%; padding: 4px;"></td>
+        </tr>
+        <tr>
+          <td style="padding: 6px;">c:</td>
+          <td><input type="text" id="c" value="-4" style="width: 90%; padding: 4px;"></td>
+        </tr>
+        <tr>
+          <td style="padding: 6px;">Result:</td>
+          <td><input type="text" id="result" readonly style="width: 90%; padding: 4px; color: red; font-weight: bold;"></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center" style="padding: 10px;">
+            <input type="button" value="Find solution" onclick="solveEquation()" 
+                   style="border: 2px solid gold; border-radius: 6px; padding: 5px 12px; margin: 4px; cursor: pointer; background-color: #fff8dc;"
+                   onmouseover="this.style.backgroundColor='#fff2b2'" 
+                   onmouseout="this.style.backgroundColor='#fff8dc'">
+            <input type="button" value="Clear" onclick="clearForm()" 
+                   style="border: 2px solid gold; border-radius: 6px; padding: 5px 12px; margin: 4px; cursor: pointer; background-color: #fff8dc;"
+                   onmouseover="this.style.backgroundColor='#fff2b2'" 
+                   onmouseout="this.style.backgroundColor='#fff8dc'">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

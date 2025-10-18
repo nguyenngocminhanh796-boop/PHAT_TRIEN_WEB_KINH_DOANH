@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Exercise 54 - Vũ Thị Thanh</title>
+    <script type="text/javascript">
+      function getValues() {
+        var a = parseFloat(document.getElementById("a").value);
+        var b = parseFloat(document.getElementById("b").value);
+        var c = parseFloat(document.getElementById("c").value);
+        return { a, b, c };
+      }
+
+      function calcMax() {
+        var { a, b, c } = getValues();
+        document.getElementById("result").value = Math.max(a, b, c);
+      }
+
+      function calcMin() {
+        var { a, b, c } = getValues();
+        document.getElementById("result").value = Math.min(a, b, c);
+      }
+
+      function calcSin() {
+        var { a } = getValues();
+        document.getElementById("result").value = Math.sin(a * Math.PI / 180);
+      }
+
+      function calcCos() {
+        var { a } = getValues();
+        document.getElementById("result").value = Math.cos(a * Math.PI / 180);
+      }
+
+      function calcPow() {
+        var { a, b } = getValues();
+        document.getElementById("result").value = Math.pow(a, b);
+      }
+    </script>
+  </head>
+  <body>
+    <form name="math_form">
+      <table border="1" cellpadding="5">
+        <tr>
+          <td>a:</td>
+          <td><input type="text" id="a" value="30"></td>
+        </tr>
+        <tr>
+          <td>b:</td>
+          <td><input type="text" id="b" value="45"></td>
+        </tr>
+        <tr>
+          <td>c:</td>
+          <td><input type="text" id="c" value="90"></td>
+        </tr>
+        <tr>
+          <td>Result:</td>
+          <td><input type="text" id="result" readonly></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="button" value="MAX" onclick="calcMax()">
+            <input type="button" value="MIN" onclick="calcMin()">
+            <input type="button" value="sin(a)" onclick="calcSin()">
+            <input type="button" value="cos(a)" onclick="calcCos()">
+            <input type="button" value="a^b" onclick="calcPow()">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
