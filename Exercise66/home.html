@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Exercise 66 - Vũ Thị Thanh</title>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 400px;
+    margin: 30px auto;
+    text-align: left;
+    font-family: Arial, sans-serif;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  th {
+    background-color: #d9ead3;
+    text-align: center;
+    font-size: 18px;
+  }
+  tr:hover {
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<table border="1" id="tbl_student">
+  <tr>
+    <th colspan="2">Student Information</th>
+  </tr>
+</table>
+
+<script type="text/javascript">
+function loadXMLFile(filename) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", filename, false);
+    xhr.send();
+    return xhr.responseText;
+}
+
+var xml_data = loadXMLFile("data.xml");
+
+var parser = new DOMParser();
+var xmlDoc = parser.parseFromString(xml_data, "text/xml");
+
+var stu_id       = xmlDoc.getElementsByTagName("id")[0].textContent;
+var stu_name     = xmlDoc.getElementsByTagName("name")[0].textContent;
+var stu_birthday = xmlDoc.getElementsByTagName("birthday")[0].textContent;
+var stu_gender   = xmlDoc.getElementsByTagName("gender")[0].textContent;
+
+var table_student = document.getElementById("tbl_student");
+var student_data = [
+  ["Student ID:", stu_id],
+  ["Student Name:", stu_name],
+  ["Birthday:", stu_birthday],
+  ["Gender:", stu_gender]
+];
+
+for (var i = 0; i < student_data.length; i++) {
+    var row_student = document.createElement("tr");
+
+    var td_label = document.createElement("td");
+    td_label.innerText = student_data[i][0];
+
+    var td_value = document.createElement("td");
+    td_value.innerText = student_data[i][1];
+
+    row_student.onmouseover = function() {
+        this.style.backgroundColor = "blue";
+        this.style.color = "white";
+    };
+
+    row_student.onmouseout = function() {
+        this.style.backgroundColor = "white";
+        this.style.color = "black";
+    };
+
+    row_student.appendChild(td_label);
+    row_student.appendChild(td_value);
+    table_student.appendChild(row_student);
+}
+</script>
+
+</body>
+</html>
