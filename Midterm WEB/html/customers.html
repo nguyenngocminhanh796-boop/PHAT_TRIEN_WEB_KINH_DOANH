@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="vi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>customers</title>
+<link rel="stylesheet" href="../css/mainstyle.css">
+</head><body onload="startClock()">
+<header><div class="container" id="menu">
+    <ul>
+      <li><a href="home.html">About me</a></li>
+      <li><a href="form-js.html">Form & Javascript</a></li>
+      <li><a href="style.html">Style</a></li>
+      <li><a href="#">API & External</a>
+        <ul>
+          <li><a href="weather.html">Weather API</a></li>
+          <li><a href="rss.html">RSS</a></li>
+          <li><a href="stocks.html">Stocks</a></li>
+        </ul>
+      </li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="customers.html">Customers</a></li>
+    </ul>
+  </div></header>
+<div id="wrap">
+  <aside><div id="marqueeBox"><div id="marquee"><img src="../images/avata.png"><div><b>Customers</b><div style="font-size:12px">Form + Table</div></div></div></div></aside>
+  <main>
+    <div class="card"><h2>Customers</h2>
+      <form id="custForm" class="grid2" autocomplete="off">
+        <div><label>ID</label><input class="input" name="custId" required></div>
+        <div><label>Họ tên</label><input class="input" name="custName" required></div>
+        <div><label>Phone</label><input class="input" name="custPhone"></div>
+        <div><label>Email</label><input class="input" type="email" name="custEmail"></div>
+        <div><label>Age</label><input class="input" type="number" name="custAge" min="1"></div>
+        <div style="align-self:end"><button class="btn primary" type="submit">Thêm</button></div>
+      </form>
+    </div>
+    <div class="card">
+      <table>
+        <thead><tr><th>#</th><th>ID</th><th>Họ tên</th><th>Phone</th><th>Email</th><th>Age</th><th>Action</th></tr></thead>
+        <tbody id="custBody"></tbody>
+      </table>
+      <p style="margin-top:8px;font-size:13px">* Age 18–35: nền vàng, ngoài khoảng đó: nền magenta (theo yêu cầu).</p>
+    </div>
+  </main>
+</div>
+<footer><div id="footbar"></div></footer>
+<script src="../js/site.js"></script><script src="../js/customers.js"></script><script>startMarquee();</script>
+</body></html>

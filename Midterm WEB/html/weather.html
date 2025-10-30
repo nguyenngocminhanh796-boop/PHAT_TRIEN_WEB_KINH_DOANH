@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="vi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>weather</title>
+<link rel="stylesheet" href="../css/mainstyle.css">
+</head><body onload="startClock()">
+<header><div class="container" id="menu">
+    <ul>
+      <li><a href="home.html">About me</a></li>
+      <li><a href="form-js.html">Form & Javascript</a></li>
+      <li><a href="style.html">Style</a></li>
+      <li><a href="#">API & External</a>
+        <ul>
+          <li><a href="weather.html">Weather API</a></li>
+          <li><a href="rss.html">RSS</a></li>
+          <li><a href="stocks.html">Stocks</a></li>
+        </ul>
+      </li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="customers.html">Customers</a></li>
+    </ul>
+  </div></header>
+<div id="wrap">
+  <aside><div id="marqueeBox"><div id="marquee"><img src="../images/avata.png"><div><b>Weather API</b><div style="font-size:12px">Min/Max hôm nay</div></div></div></div></aside>
+  <main>
+    <div class="card"><h2>Weather API</h2>
+      <p>Danh sách một số tỉnh/thành và nhiệt độ <b>min/max hôm nay</b> (Open-Meteo).</p>
+    </div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Tỉnh/Thành</th><th>Min</th><th>Max</th></tr></thead>
+        <tbody id="wBody"></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+<footer><div id="footbar"></div></footer>
+<script src="../js/site.js"></script><script src="../js/weather.js"></script><script>startMarquee();</script>
+</body></html>

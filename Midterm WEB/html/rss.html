@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="vi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>rss</title>
+<link rel="stylesheet" href="../css/mainstyle.css">
+</head><body onload="startClock()">
+<header><div class="container" id="menu">
+    <ul>
+      <li><a href="home.html">About me</a></li>
+      <li><a href="form-js.html">Form & Javascript</a></li>
+      <li><a href="style.html">Style</a></li>
+      <li><a href="#">API & External</a>
+        <ul>
+          <li><a href="weather.html">Weather API</a></li>
+          <li><a href="rss.html">RSS</a></li>
+          <li><a href="stocks.html">Stocks</a></li>
+        </ul>
+      </li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="customers.html">Customers</a></li>
+    </ul>
+  </div></header>
+<div id="wrap">
+  <aside><div id="marqueeBox"><div id="marquee"><img src="../images/avata.png"><div><b>RSS</b><div style="font-size:12px">VnExpress Giáo dục</div></div></div></div></aside>
+  <main>
+    <div class="card"><h2>RSS – VnExpress Giáo dục</h2>
+      <p>Nguồn: <code>https://vnexpress.net/rss/giao-duc.rss</code></p>
+      <div id="rssErr" style="color:#b91c1c"></div>
+    </div>
+    <div id="rssList"></div>
+  </main>
+</div>
+<footer><div id="footbar"></div></footer>
+<script src="../js/site.js"></script><script src="../js/rss.js"></script><script>startMarquee();</script>
+</body></html>
